@@ -1,0 +1,236 @@
+{
+  "site": {
+    "title": "Mariem Samet - Embedded Systems & AI Engineer",
+    "author": "Mariem Samet",
+    "logo": "/logo-mariem.svg",
+    "favicon": "/logo-mariem.svg",
+    "colors": {
+      "primary": "#404C9B",
+      "secondary": "#A1529B",
+      "gradient": ["#404C9B", "#A1529B"]
+    }
+  },
+  "hero": {
+    "welcome": "Welcome to my digital space",
+    "titleLeft": "Mariem",
+    "titleAccent": "Samet",
+    "titleRight": "",
+    "subtitle": "Engineering the Sentient Edge: Where Embedded Systems Sense, IoT Connects, and AI Decides.",
+    "primaryCta": "View My Work",
+    "secondaryCta": "Download Resume",
+    "cv": "/Mariem-Samet CV.pdf",
+    "profileImage": "/mariemsamet.png",
+    "background": {
+      "type": "gradient",
+      "from": "#404C9B",
+      "to": "#A1529B",
+      "style": "radial",
+      "particles": true
+    }
+  },
+  "socials": {
+    "github": "https://github.com/mariem-samet",
+    "linkedin": "https://www.linkedin.com/in/mariem-samet-b67432331/",
+    "email": "mailto:mariemsamet04@gmail.com"
+  },
+  "about": {
+    "heading": "About Me",
+    "subheading": "Engineering the future at the intersection of hardware and intelligence",
+    "paragraphs": [
+      "I am Mariem Samet, an engineering student specializing in the powerful fusion of embedded systems and artificial intelligence. My journey began with a curiosity for how things work, which evolved into a passion for making them intelligent. I thrive on the entire development process, from designing the electronic architecture and programming low-level microcontrollers to training sophisticated deep learning models and deploying them onto compact, real-world devices.",
+      "My objective is to push the boundaries of what's possible at the hardware-software frontier. I specialize in creating end-to-end solutions where embedded systems don't just collect data, but perceive their environment; where IoT connectivity doesn't just transmit, but informs; and where on-device AI doesn't just process, but decides and acts autonomously. For me, true innovation lies in this seamless integration. I am determined to leverage this synergy to tackle complex challenges in fields like autonomous systems and environmental technology, transforming raw data into intelligent, tangible impact that makes our interactions with technology more adaptive, efficient, and meaningful."
+    ],
+    "highlights": [
+      { "title": "Embedded Systems", "description": "Deep expertise in STM32, ESP32, Raspberry Pi, and real-time control systems" },
+      { "title": "Artificial Intelligence", "description": "Deploying machine learning models on edge devices for autonomous decision-making" },
+      { "title": "IoT Integration", "description": "Building connected systems that sense, communicate, and act intelligently" },
+      { "title": "End-to-End Solutions", "description": "From PCB design to AI model deployment - complete system integration" }
+    ]
+  },
+  "skills": {
+    "heading": "Technical Skills",
+    "subheading": "A comprehensive toolkit for intelligent embedded systems",
+    "categories": [
+      { "name": "Embedded Systems", "skills": ["STM32", "Arduino", "Raspberry Pi", "ESP32", "SPI/UART/I2C", "CAN", "Real-time control", "Electronic Design"] },
+      { "name": "Programming Languages", "skills": ["C", "C++", "Python", "JavaScript", "VHDL-AMS"] },
+      { "name": "Artificial Intelligence", "skills": ["TensorFlow", "Keras", "YOLOv8", "Computer Vision", "Reinforcement Learning", "Edge AI"] },
+      { "name": "Web Development", "skills": ["Angular", "RESTful APIs"] },
+      { "name": "Tools & Technologies", "skills": ["STM32CubeIDE", "STM32CubeMX", "MATLAB & Simulink", "LabVIEW", "Altium Designer", "Android Studio", "Git & GitHub", "VS Code"] }
+    ]
+  },
+  "projects": {
+    "heading": "Featured Projects",
+    "subheading": "Intelligent systems built from silicon to software",
+    "categories": ["All", "Embedded", "AI", "IoT", "PCB Design"],
+    "items": [
+      {
+        "id": 1,
+        "title": "Secure Access Control System with STM32",
+        "shortDescription": "Developed a secure access control system using an STM32 microcontroller, integrating a matrix keypad for PIN entry and an LCD for user feedback. The system validates user input against a secret code and actuates a servo motor to grant physical access, demonstrating a practical application of embedded systems design with peripheral configuration, real-time input handling, and actuator control.",
+        "description": "This project involved the design and implementation of a fully functional access control system centered around an STM32 Nucleo-F446RE microcontroller. The core functionality allows a user to enter a 4-digit PIN code on a 4x4 matrix keypad. The system, programmed in C using the STM32 HAL library, then compares this input against a pre-programmed secret code.\n\nThe user interface is managed through an I2C LCD, which provides immediate feedback with messages such as 'Entering Code...', 'Access Granted', and 'Access Denied'. Upon successful authentication, a servo motor rotates to 90 degrees, simulating the unlocking of a door, and resets after a brief period. The system also includes logic to reset the input using the '*' key and to handle incorrect codes.\n\nFrom a technical perspective, the project required low-level configuration of several microcontroller peripherals:\n\nGPIO: Implemented a row-column scanning algorithm with debouncing to accurately read inputs from the matrix keypad.\n\nI2C: Utilized for efficient communication with the LCD screen, minimizing GPIO usage.\n\nPWM (via Timer TIM4): Generated a precise 50Hz signal to control the servo motor's position, with dynamic pulse width calculation to achieve specific angles.\n\nThis project served as a comprehensive demonstration of embedded system integration, combining sensor input, user interface design, and physical actuation into a cohesive and functional prototype.",
+        "technologies": ["Embedded C", "STM32", "I2C", "PWM", "GPIO"],
+        "category": "Embedded",
+  "image": "/stm32.jpg",
+        "video": "/Vidéo Projet STM32.mp4",
+        "github": "",
+        "demo": ""
+      },
+      {
+        "id": 2,
+        "title": "Automotive AI Intelligent System for Security and Comfort",
+        "shortDescription": "Developed an intelligent automotive safety and comfort system using a Raspberry Pi 4, designed to modernize older vehicles. The system integrates multiple AI modules—including facial recognition for secure access, seatbelt and child presence detection, and driver drowsiness monitoring—into a single, cost-effective embedded platform. It features both a graphical and a hands-free voice interface, with an intelligent automation loop that activates critical safety checks upon driver identification, creating a proactive and user-friendly in-car assistant.",
+        "description": "This project involved the end-to-end design and implementation of a comprehensive, AI-powered embedded system to enhance safety and comfort in vehicles, particularly targeting older models lacking modern features. The core platform was a Raspberry Pi 4, which hosted four integrated detection models:\n\nFacial Recognition: Secured vehicle access by identifying authorized users, triggering a servo motor to simulate door unlocking.\n\nSeatbelt Detection: Utilized a custom-trained YOLOv8 model to verify if occupants were wearing seatbelts, activating visual LED alerts for violations.\n\nChild Presence & Temperature Alert: Combined a computer vision model (via Roboflow) with a DHT22 sensor to detect children left in the vehicle, sending SMS alerts via the Twilio API if temperatures became unsafe.\n\nDriver Drowsiness Detection: Employed a TensorFlow Lite model to analyze the driver's state in real-time, triggering audible and visual warnings upon detecting fatigue.\n\nA significant enhancement was the implementation of an intelligent automation loop. Upon successful facial recognition, the system automatically and sequentially activates the other three safety models without any user input, ensuring continuous and proactive monitoring.\n\nThe system offers dual user interfaces for flexibility: a lightweight Tkinter GUI for manual control and a robust, offline voice interface using SpeechRecognition and pyttsx3. The voice control was extended beyond model activation to include contextual commands for comfort features like controlling simulated windows, interior lights, music playback, and personalized greetings.\n\nThis project demonstrated a full-stack integration of hardware (Pi, camera, sensors, actuators) and software (computer vision, AI models, multi-threading, API integration), resulting in a modular, low-cost, and highly autonomous solution for improving automotive safety.",
+        "technologies": ["Raspberry Pi 4", "Python", "OpenCV", "TensorFlow", "YOLOv8", "Roboflow", "Twilio API", "GPIO", "PWM"],
+        "category": "AI",
+        "image": "/Pfa.jpeg",
+        "github": "",
+        "demo": ""
+      },
+      {
+        "id": 3,
+        "title": "CAN Bus Virtualization with AUTOSAR Signal-Level Simulation",
+        "shortDescription": "Engineered a high-fidelity CAN bus virtualization platform during my internship at KPIT Technologies to overcome hardware bottlenecks in automotive software testing. The system performs AUTOSAR-compliant, signal-level simulation of in-vehicle networks, combining a deterministic C++ core for real-time performance with a RESTful API for dynamic interaction. This enables Software-in-the-Loop (SIL) testing, allowing developers to validate ECU software against a virtual network long before physical prototypes are available.",
+        "description": "This project involved the end-to-end design and development of a professional-grade 'software-defined' CAN bus to address critical bottlenecks in automotive validation cycles, which are traditionally dependent on costly and scarce Hardware-in-the-Loop (HIL) benches.\n\nThe system was architected as a hybrid solution for optimal performance and interoperability:\n\nHigh-Performance Core: A deterministic C++ simulation engine that replicates microsecond-accurate CAN bus behavior, including message scheduling, priority-based arbitration, and bit-accurate signal packing/unpacking according to the AUTOSAR standard.\n\nInteroperability Layer: A RESTful HTTP API that exposes the virtual bus to the wider toolchain, allowing external clients like Functional Mock-up Units (FMUs), test scripts, and dashboards to read from and write to the bus in real-time, enabling true co-simulation.\n\nToolchain Integration: The system ingests standard DBC network definition files (via a Python preprocessor) and generates industry-standard Vector ASC log files, ensuring seamless compatibility with tools like CANoe and CANalyzer for analysis and validation.\n\nBy creating a centralized, virtual 'nervous system' for the vehicle, this platform empowers agile development teams to conduct continuous integration and exhaustive testing of ECU software earlier in the development cycle, significantly reducing costs and accelerating time-to-market for modern software-defined vehicles.",
+        "technologies": ["C++", "Python", "REST API", "AUTOSAR", "CAN Protocol", "DBC", "FMU"],
+        "category": "Embedded",
+        "image": "",
+        "video": "/KPIT Project.mp4",
+        "github": "",
+        "demo": ""
+      },
+      {
+        "id": 4,
+        "title": "Toothy",
+        "shortDescription": "I co-developed Toothy, an award-winning smart oral care app that transforms children's brushing into an engaging, gamified experience. The app uses AI-powered computer vision (YOLOv5) to track brushing coverage and a custom audio model to verify correct technique, ensuring a full, effective clean. Built with Flutter and Unity, Toothy provides a vibrant cross-platform interface for kids and an insightful dashboard for parents, all secured with AES encryption.",
+        "description": "As a key member of a 6-person team, I helped design and build Toothy, a comprehensive mobile application that won first place in a competitive hackathon for its innovative approach to a common health problem.\n\nThe project tackled the challenge of poor brushing habits in children by creating an interactive coach. The technical solution was multi-faceted:\n\nAI-Powered Brushing Verification: We integrated a YOLOv5 object detection model, processed and augmented via RoboFlow, to track the toothbrush's movement in real-time using the phone's camera. This ensured every tooth surface was covered. A parallel, custom audio detection model analyzed brushing sounds and vibrations to confirm the brush was in the mouth and identify the specific area being cleaned.\n\nGamified User Experience: To make brushing fun, we used Unity to develop interactive games and real-time feedback mechanisms. This kept children engaged for the dentist-recommended two minutes and encouraged proper technique through rewards.\n\nCross-Platform Development & Security: The main application was built with Flutter, ensuring a consistent, responsive, and visually appealing experience across both iOS and Android for both the child's and parent's interfaces. We prioritized data security by implementing AES encryption to protect all sensitive user data and brushing analytics.\n\nAdditional Assets: Blender was used to create 3D models and visual assets for the Unity-based games and tutorials, enhancing the app's visual appeal.\n\nThis project demonstrated a full-stack capability, from training and deploying machine learning models for a real-world task to developing a secure, cross-platform mobile application with a strong focus on user-centric design. Winning first place validated our solution's technical merit and market potential.",
+        "technologies": ["Flutter", "Unity", "YOLOv5", "RoboFlow", "Python", "AES Encryption", "Blender"],
+        "category": "AI",
+  "image": "/toothy.jpg",
+        "video": "/ToothyEnv.mkv",
+        "github": "",
+        "demo": ""
+      },
+      {
+        "id": 5,
+        "title": "STM32 PCB Design",
+        "shortDescription": "I designed a complex 6-layer schematic and PCB for an STM32F4-based system in Altium Designer. The board integrates an MPU-9250 IMU, an LM75 temperature sensor, and an SWD debug interface, featuring a robust power supply, crystal oscillator, and proper grounding. This project demonstrates my end-to-end proficiency in professional electronic design, from schematic capture and library management to final PCB layout and 3D modeling.",
+        "description": "This project involved the complete electronic design of a sophisticated embedded system centered around an STM32F407VGT6 microcontroller. The goal was to master the professional PCB design workflow using Altium Designer, from initial schematic capture to the final routed board.\n\nKey Responsibilities & Achievements:\n\nModular Schematic Design: Organized the complex system into a logical, 6-sheet hierarchical schematic for clarity and modularity. The sheets were:\n\nSTM32 Core: The main microcontroller with GPIO breakdown.\n\nMPU-9250 IMU: 9-axis motion tracking sensor (accelerometer, gyroscope, magnetometer) connected via I2C.\n\nLM75 Temperature Sensor: Digital temperature sensing via I2C.\n\nSWD/JTAG Debug Interface: For programming and in-circuit debugging.\n\nClock & Reset Circuit: Featuring an 8 MHz crystal oscillator and boot configuration.\n\nPower Supply: Robust power distribution and filtering for stable operation.\n\nLibrary & Component Management: Sourced and integrated components from standard Altium libraries and created custom footprints for specialized parts (MPU-9250, LM75, crystal, JTAG connector) from SnapEDA, ensuring accuracy for manufacturing.\n\nPCB Layout & Routing: Executed the physical board layout, strategically placing components to minimize noise and cross-talk. Implemented a solid ground plane for signal integrity and successfully routed all connections on a 2-layer board, adhering to best practices for mixed-signal design.\n\nValidation & Outputs: Generated comprehensive output files necessary for fabrication and assembly, and utilized Altium's 3D visualization to verify the final form factor and component placement.\n\nThis project provided hands-on experience in the entire electronic product development cycle, solidifying my skills in professional-grade EDA tools and robust PCB design principles for modern embedded systems.",
+        "technologies": ["Altium Designer", "STM32F407", "PCB Layout", "Electronic Design"],
+        "category": "PCB Design",
+        "image": "/PCB.png",
+        "github": "",
+        "demo": ""
+      },
+      {
+        "id": 6,
+        "title": "Inverted Pendulum Control System",
+        "shortDescription": "Designed and implemented a self-balancing inverted pendulum system using a Q-learning algorithm. This project involved both software simulation in OpenAI Gym and physical hardware integration. I developed the RL agent in Python to learn the control policy and built the embedded system using an ESP32 microcontroller to drive a DC motor and read a rotary encoder for real-time positional feedback. This project showcased a full-stack application of AI on an embedded system, from theory and simulation to practical hardware implementation.",
+        "description": "This project was the centerpiece of a research internship focused on applying Artificial Intelligence to control complex, unstable physical systems. The goal was to create a system that could learn to balance an inverted pendulum autonomously. The project was bifurcated into a software simulation phase and a hardware implementation phase, providing a comprehensive experience in both AI algorithm development and embedded systems engineering.\n\nKey Responsibilities & Achievements:\n\nReinforcement Learning Algorithm Development:\n\nImplemented a Q-learning algorithm from scratch in Python to solve the classic CartPole-v1 environment from OpenAI Gym.\n\nEngineered a state discretization strategy to manage the continuous state space of the pendulum (position, velocity, angle, angular velocity).\n\nUtilized an epsilon-greedy policy to effectively balance exploration and exploitation during the agent's training process.\n\nAchieved a successful learning curve, demonstrating the agent's improved ability to maintain balance over numerous training episodes.\n\nEmbedded Systems & Hardware Integration:\n\nDesigned and assembled the physical pendulum system using a DC motor, a high-resolution rotary encoder (400 PPR), and an ESP32 microcontroller.\n\nProgrammed the ESP32 in C++ to control the motor's speed and direction via Pulse Width Modulation (PWM) and GPIO pins.\n\nIntegrated the rotary encoder to provide precise real-time feedback on the pendulum's angular position, a critical input for the control algorithm.\n\nEstablished the foundational hardware control system, enabling precise motor manipulation based on sensor data.",
+        "technologies": ["Python", "OpenAI Gym", "Q-learning", "ESP32", "DC Motor", "Rotary Encoder", "PWM"],
+        "category": "AI",
+        "image": "/projects/inverted-pendulum.png",
+        "github": "",
+        "demo": ""
+      }
+      ,{
+        "id": 7,
+        "title": "Intelligent Conversational Assistant with RAG",
+        "shortDescription": "Built a full-stack Retrieval-Augmented Generation (RAG) chatbot that delivers source‑cited, up-to-date answers by combining hybrid (semantic + lexical) retrieval, dynamic prompt assembly, and orchestrated fallback between RAG, web search, and pure LLM modes.",
+        "description": "This project implements an intelligent conversational assistant developed during a final-year internship. It enables users to ask complex, contextual questions and receive grounded, source‑cited answers drawn from uploaded documents and (optionally) real-time web data. The backend (Flask) manages document ingestion, chunking, embedding generation (SentenceTransformers), and hybrid retrieval using both pgvector (semantic search) and PostgreSQL full-text search (lexical). Ranking quality is improved through Maximal Marginal Relevance (MMR) and Reciprocal Rank Fusion (RRF) to balance relevance and diversity. The system dynamically chooses between RAG (internal knowledge), Web Search (fresh external info), or Standard LLM generation depending on query intent, optimizing latency and accuracy. Conversations are persisted with metadata for later analytics and quality review. The React frontend provides an interactive chat UI with streaming responses, source citation panels, document upload management, and user authentication. The architecture emphasizes reliability (fallback paths), explainability (per‑chunk citations), performance (adaptive context window trimming), and extensibility (planned reranking and feedback-driven relevance boosting). Future enhancements include: reranker integration (cross-encoder), conversational memory threading, active learning via thumbs up/down, and automated evaluation dashboards tracking recall, latency, and hallucination rates.",
+        "technologies": ["Flask", "React", "TypeScript", "Python", "PostgreSQL", "pgvector", "SentenceTransformers", "LangChain", "OpenAI API", "MMR", "RRF"],
+        "category": "AI",
+        "image": "/rag-assistant.png",
+        "video": "/demo_small.mp4",
+        "github": "",
+        "demo": ""
+      }
+    ]
+  },
+  "experience": {
+    "heading": "Experience & Education",
+    "subheading": "A journey of continuous growth and innovation",
+    "timeline": [
+      {
+        "type": "work",
+        "title": "Intern",
+        "company": "KPIT Technologies",
+        "location": "Sfax, Tunisia",
+        "period": "July - August 2024",
+        "description": "Co-Developed a real-time CAN bus simulator in C++ for virtual ECU testing. Implemented DBC file parsing for network configuration, designed a REST API for FMU integration, and generated ASC logs for validation using industry-standard tools.",
+        "technologies": ["C++", "CAN Protocol", "REST API", "AUTOSAR"]
+      },
+      {
+        "type": "work",
+        "title": "Research Intern",
+        "company": "Advanced Electronic Systems and Sustainable Energy Laboratory, ENET'Com",
+        "location": "Sfax, Tunisia",
+        "period": "June 2024",
+        "description": "Designed and implemented a reinforcement learning algorithm to control an inverted pendulum. Leveraged the ESP32 microcontroller to manage motor control and encoder feedback for real-time stability adjustments.",
+        "technologies": ["ESP32", "Python", "Reinforcement Learning", "Control Systems"]
+      },
+      {
+        "type": "education",
+        "title": "Engineering Degree in Electronics of Communication Systems Engineering",
+        "company": "National School of Electronics and Telecommunications of Sfax (ENET'Com)",
+        "location": "Sfax, Tunisia",
+        "period": "2023 - Present",
+        "description": "Specializing in Embedded Systems and Artificial Intelligence with focus on hardware-software integration and intelligent system design.",
+        "technologies": []
+      },
+      {
+        "type": "education",
+        "title": "Preparatory Cycle for Engineering Studies - Physics & Chemistry",
+        "company": "Preparatory Engineering Institute of Sfax",
+        "location": "Sfax, Tunisia",
+        "period": "2021 - 2023",
+        "description": "Intensive two-year program focusing on fundamental sciences and mathematics as preparation for engineering studies.",
+        "technologies": []
+      },
+      {
+        "type": "education",
+        "title": "High School Diploma in Mathematics",
+        "company": "Secondary School Abou El Kacem Chebbi",
+        "location": "Sfax, Tunisia",
+        "period": "2017 - 2021",
+        "description": "",
+        "technologies": []
+      },
+      {
+        "type": "certification",
+        "title": "Microsoft Azure AI Fundamentals",
+        "company": "Microsoft",
+        "location": "Online",
+        "period": "2024",
+        "description": "Certified in fundamental AI concepts and Azure AI services.",
+        "technologies": []
+      },
+      {
+        "type": "certification",
+        "title": "Introduction to Angular",
+        "company": "Online Course",
+        "location": "Online",
+        "period": "2024",
+        "description": "Certificate of Completion for Angular framework development.",
+        "technologies": []
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Let's Connect",
+    "subheading": "Have a project in mind or want to collaborate on intelligent embedded systems?",
+    "info": [
+      { "label": "Email", "value": "mariemsamet04@gmail.com", "href": "mailto:mariemsamet04@gmail.com" },
+      { "label": "LinkedIn", "value": "Mariem Samet", "href": "https://www.linkedin.com/in/mariem-samet-b67432331/" },
+      { "label": "Location", "value": "Sfax, Tunisia", "href": "#" }
+    ],
+    "ctaText": "Have a project in mind?",
+    "ctaSub": "Collaborate with me to create embedded systems that see, think, and act—transforming raw data into real-world outcomes.",
+    "cv": "/Mariem-Samet CV.pdf"
+  },
+  "footer": {
+    "brandName": "Mariem Samet",
+    "tagline": "Built with passion using React & TypeScript - Engineering intelligent embedded systems.",
+    "quickLinks": ["Home", "About", "Skills", "Projects", "Experience", "Contact"],
+    "copyright": "All rights reserved"
+  }
+}

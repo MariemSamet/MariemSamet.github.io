@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
+    <meta http-equiv="refresh" content="0; url=/" />
+    <script>
+      // SPA fallback for GitHub Pages: redirect all unknown routes to index.html
+      (function () {
+        var l = window.location;
+        // If there is a path (deep link), keep it in a query so the app can handle it if needed
+        var redirect = '/';
+        if (l.pathname && l.pathname !== '/') {
+          redirect += '?p=' + encodeURIComponent(l.pathname + l.search + l.hash);
+        }
+        l.replace(redirect);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>
